@@ -1,0 +1,268 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1.0 cm, % seperation between body and page edge from the top
+    bottom=1.0 cm, % seperation between body and page edge from the bottom
+    left=1 cm, % seperation between body and page edge from the left
+    right=1 cm, % seperation between body and page edge from the right
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Roméo Maignal's CV},
+    pdfauthor={Roméo Maignal},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{multicol} % for multiple columns
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+% \makeatletter
+% \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+% \patchcmd{\ps@customFooterStyle}{\thepage}{
+%     \color{gray}\textit{\small Roméo Maignal - Page \thepage{} of \pageref*{LastPage}}
+% }{}{} % replace number by desired string
+% \makeatother
+% \pagestyle{customFooterStyle}
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.2 cm
+}{
+    % bottom space:
+    0.1 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{20 pt}{20 pt}
+        \textbf{Roméo Maignal}
+        
+        \vspace{0.2 cm}
+
+        \normalsize
+        \mbox{\hrefWithoutArrow{https://github.com/relogamimano}{{\footnotesize\faGithub}\hspace*{0.13cm}relogamimano}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/rom\%C3\%A9o-maignal-5a62a21a5/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}roméo-maignal}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:romeo.maignal@epfl.ch}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}romeo.maignal@epfl.ch}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+33-6-95-75-99-98}{{\footnotesize\faPhone*}\hspace*{0.13cm}06 95 75 99 98}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.google.com/maps/place/Lausanne/}{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Lausanne, Switzerland}}%
+    \end{header}
+    
+    \vspace{0.5 cm}
+    I am a bachelor student in Computer Science at EPFL in Switzerland. Currently, I work as a system engineer for a CubeSat student project. My interests include open-source software, systems engineering, low-level programming and cyber-security. 
+    % I have many interests but when it comes to coding, I spend most of my time collaborating on open-source projects and making sure all of my work always has a nice UI.
+    
+    \section{Work Experience}
+        \textbf{EPFL Spacecraft Team}\href{https://www.epflspacecraftteam.ch/}{}\hfill Lausanne, Switzerland\\
+        {System Engineer for the CHESS Mission} \hfill Sept 2023 - Present
+        \begin{highlights}
+            \item Contributed to the mission's PDR by writing the Interface Control Document for 4 different subsystems following ECSS standards.
+            \item Defined system requirements for CubeSat data/power transmission and the payload’s architecture, weight and dimensions.
+            \item Conducted tests and simulations to verify the performance and reliability of the telecommunication components.
+            \item Successfully troubleshot and resolved technical issues that arose during the satellite's design review such as misplacements of crucial mechanical interfaces.
+        \end{highlights}
+        
+    \section{Education}
+        \textbf{École Polytechnique Fédérale de Lausanne}\hfill Lausanne, Switzerland\\
+        Bachelor in Computer Science\hfill Sept 2022 - June 2026
+        \begin{highlights}
+            \item Relevant courses : Computer Architecture, Computer Systems \& Network, Intro to ML, Software Construction, Digital System Design, Object Oriented Programming
+            
+        \end{highlights}
+        % \textbf{Lycée Français International Georges Pompidou} \hfill Dubai, UAE\\
+        % Baccalauréat Général\hfill Sept 2016 - June 2022
+        % \begin{highlights}
+        %     \item Relevant courses: Mathématiques, Physique-Chimie, Mathes Expertes
+            
+        % \end{highlights}
+    
+    \section{Notable Projects}
+    % \vspace{-2em} % Adjust the value as needed
+    % \begin{multicols}{2}    
+
+        \textbf{Aircraft Flights Tracking Software}\href{https://github.com/relogamimano/Javions}{}
+        \begin{highlights}
+            \item Developed a FlightRadar24-like software from scratch in Java over a period of four months. It involved various
+            engineering fields (data transmission, aircraft data interfaces, ADS-B communication, aircraft location settings, cryptography).
+            \item Tools used: Java, JavaFX, JUnit, JVM, IntelliJ, ADS-B Antenna
+        \end{highlights}
+
+        \textbf{Conway's Game-of-Life in RISC-V Assembly}\href{https://github.com/relogamimano/Conway-s-Game-of-Life-in-RISC-V-Assembly}{}
+        \begin{highlights}
+            \item Implementation, on a GECKO board, of John Conway's famous Game of Life, in RISC-V assembly language.
+            \item Tools used: RISC-V, GTKWave, MemoryView
+        \end{highlights}
+        \textbf{Scala Web App}\href{https://github.com/relogamimano/Scala-Web-App}{}
+        \begin{highlights}
+            \item Multiplayer web game application written in Scala. It Implements a famous board game and use a client-server architecture to connect multiple players. I made use of scala state machines and json serialization/deserialization functions.
+            \item Tools used: Scala, Metals, SBT
+        \end{highlights}
+
+        \textbf{Interface Control Documents}\href{https://drive.google.com/drive/folders/1KWNjMkGwcYpTIh6xBs-nddBK195R_ihb?usp=sharing}{}
+        \begin{highlights}
+            \item ICDs for the telecommunication subsystems of a CubeSat. It involved learning the specific requirements for CubeSat development and adhering to ECSS standards to give the project good technical directives.
+            \item Tools used: Overleaf, LaTeX, FusionCAD
+        \end{highlights}
+
+        \textbf{Haystack Store File System}\href{https://github.com/relogamimano/haystack-store}{}
+        \begin{highlights}
+            \item Scalable file system for big data, inspired by Facebook's Haystack Storage system. It offers a cheap and higher performance solution to the user image storage space problem.
+            \item Tools used: C, GCC
+        \end{highlights}
+
+
+        % \textbf{Roguelike Java Game}\href{https://github.com/relogamimano/Rogue-Like-Game-MP2-2022}{}
+        % \begin{highlights}
+        %     \item Roguelike desktop game built in Java.
+        %     \item Tools used: Java, JavaFX, JUnit, IntelliJ
+        % \end{highlights}
+
+
+        % \textbf{Image Compressor / Decompressor}\href{https://github.com/relogamimano/Image-Compressor-Decompressor}{}
+        % \begin{highlights}
+        %     \item Java program using QOI format to compress and decompress images.
+        %     \item Tools used: Java, JUnit, IntelliJ
+        % \end{highlights}
+    % \end{multicols}
+    % \vspace{-1em} % Adjust the value as needed
+
+        
+        
+    
+    \section{Competences}
+    \textbf{Languages:} C, Java, C++, Scala, Python, Javascript/Typescript, RISC-V Assembly, Verilog, VHDL, LaTeX
+    
+    \vspace{0.2 cm}
+    
+    \textbf{Tools:} Git, Github, VSCode, IntelliJ, Overleaf, GTKWave, FusionCAD, Blender ; \textbf{Frameworks/Platforms:} React, Next.js, Node.js
+    
+    \vspace{0.2cm}
+    
+    \textbf{Skills:} Functional Programming, Object-Oriented Programming, Memory and Network Oriented Programming, Algorithms, Data Structures, Machine Learning
+    
+    
+    
+    \section{Non-Technical Work Experience}
+    % % \textbf{TownSquare}\hfill Dubai\\
+    % % Piano Teacher \hfill Sept 2020 - April 2021
+    % % \begin{highlights}
+    % %     \item Taught piano and music theory to young children, fostering their musical development.
+    % % \end{highlights}
+    
+    \textbf{CSNB}\hfill Brive, France\\
+    Seasonal Boat Rental Manager\hfill July 2020 - July 2023
+    \begin{highlights}
+        \item Summer job at a lake sports facility. Rented and repaired various boats. Led summer
+        camp children in different activities.
+    \end{highlights}
+    
+    \textbf{Rolex Learning Center}\hfill Lausanne, Switzerland\\
+    Klee barista\hfill June 2023 - June 2023
+    \end{document}
