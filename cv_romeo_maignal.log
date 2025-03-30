@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.17)  22 MAR 2025 13:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.17)  30 MAR 2025 16:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,25 +697,25 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on in
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on input line 151.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 162.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 163.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 162.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 162.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 162.
+(Font)              scaled to size 14.4pt on input line 163.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/bold/n' on input line 163.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 163.
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 166.
+(Font)              scaled to size 14.4pt on input line 163.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 164.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 164.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 167.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 166.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 167.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 166.
+(Font)              scaled to size 10.0pt on input line 167.
 
 
 [1
@@ -731,13 +731,13 @@ L3 programming layer <2024-09-10>
 Here is how much of TeX's memory you used:
  16025 strings out of 473579
  275163 string characters out of 5728233
- 687800 words of memory out of 5000000
+ 686800 words of memory out of 5000000
  38698 multiletter control sequences out of 15000+600000
  621056 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,80p,501b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on cv_romeo_maignal.pdf (1 page, 187478 bytes).
+Output written on cv_romeo_maignal.pdf (1 page, 187529 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
