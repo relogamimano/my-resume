@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1744828180.94554 "/home/romeo-maignal/Desktop/Job application/CV ATS optimized/cv_romeo_maignal.tex" "cv_romeo_maignal.pdf" "cv_romeo_maignal" 1744828181.76606 0
-  "/home/romeo-maignal/Desktop/Job application/CV ATS optimized/cv_romeo_maignal.tex" 1744828180.57781 11571 ca659c77fe8809d59c73a15b426a1e1f ""
+["pdflatex"] 1746568009.83258 "/home/romeo-maignal/Desktop/Job application/CV ATS optimized/cv_romeo_maignal.tex" "cv_romeo_maignal.pdf" "cv_romeo_maignal" 1746568010.62281 0
+  "/home/romeo-maignal/Desktop/Job application/CV ATS optimized/cv_romeo_maignal.tex" 1746568009.46185 11571 a80ccca32dbc9d8413ea01d3e89cffd2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
@@ -117,8 +117,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1729170096 5475505 9858817de6e728d163c121232b884c29 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729170263 3325958 f05b7ebec3aa0cf1ae0182fe55071def ""
   "/usr/local/texlive/2024/texmf.cnf" 1729170090.90266 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "cv_romeo_maignal.aux" 1744828181.66479 2021 6029d79415c792e07a0e54b3275dabeb "pdflatex"
-  "cv_romeo_maignal.tex" 1744828180.57781 11571 ca659c77fe8809d59c73a15b426a1e1f ""
+  "cv_romeo_maignal.aux" 1746568010.51586 2021 6029d79415c792e07a0e54b3275dabeb "pdflatex"
+  "cv_romeo_maignal.tex" 1746568009.46185 11571 a80ccca32dbc9d8413ea01d3e89cffd2 ""
   (generated)
   "cv_romeo_maignal.aux"
   "cv_romeo_maignal.log"
